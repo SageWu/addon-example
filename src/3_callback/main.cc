@@ -5,8 +5,6 @@ using namespace v8;
 void Run(const FunctionCallbackInfo<Value>& info) {
   Isolate* isolate = info.GetIsolate();
   Local<Context> context = isolate->GetCurrentContext();
-  // 进入context
-  Context::Scope enter_context(context);
   // 创建scope
   HandleScope scope();
 

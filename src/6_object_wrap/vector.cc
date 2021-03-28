@@ -79,6 +79,7 @@ void Vector::New(const FunctionCallbackInfo<Value>& info) {
 // 实例属性 getter
 void Vector::Getter(Local<String> key, const PropertyCallbackInfo<Value>& info) {
   Isolate* isolate = Isolate::GetCurrent();
+  HandleScope scope();
   // 转为c++字符串
   std::string keyStr(*String::Utf8Value(isolate, key));
   // 获取存放在实例内部的c++对象 
@@ -95,6 +96,7 @@ void Vector::Getter(Local<String> key, const PropertyCallbackInfo<Value>& info) 
 void Vector::Setter(Local<String> key, Local<Value> value, const PropertyCallbackInfo<void>& info) {
   Isolate* isolate = Isolate::GetCurrent();
   Local<Context> context = isolate->GetCurrentContext();
+  HandleScope scope();
   // 处理参数
   std::string keyStr(*String::Utf8Value(isolate, key));
   double valueNum = value->NumberValue(context).ToChecked();

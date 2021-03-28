@@ -16,3 +16,13 @@
 
 ## HandleScope
 管理`local handles`的生命周期。
+
+## FunctionTemplate
+用来创建运行时函数的模板，在一个`Context`中，只能有一个`Function`从模板中创建出来。\
+可以在`FunctionTemplate`上设置属性，即为创建的函数对象的属性。\
+每个`FunctionTemplate`都有对应的`InstanceTemplate`，用来创建对象实例，当从函数模板创建出来的函数被用作构造函数时。添加到实例模板上的属性，即为对象实例的属性。\
+每个`FunctionTemplate`都有对应的`PrototypeTemplate`，用来创建运行时函数的原型对象。\
+函数模板可以继承其他函数模板。
+
+## ObjectTemplate
+用来创建运行时对象的模板。

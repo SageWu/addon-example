@@ -1,0 +1,22 @@
+{
+  "name": "addon-example",
+  "version": "1.0.0",
+  "description": "nodejs addon examples implemented via direct use of v8.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SageWu/addon-example.git"
+  },
+  "keywords": [
+    "nodejs",
+    "addon"
+  ],
+  "author": "SageWu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SageWu/addon-example/issues"
+  },
+  "homepage": "https://github.com/SageWu/addon-example#readme"
+}

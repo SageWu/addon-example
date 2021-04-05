@@ -17,6 +17,11 @@
 ## HandleScope
 管理`local handles`的生命周期。
 
+## Handle
+代表对象引用，内部存在一个指针指向`v8`创建的对象。\
+由`v8`的垃圾回收器进行管理，跟踪对象是否还存在引用，以及更新其内部指针当对象发生移动的时候。\
+`handle`分成`local`和`persistent`两种，`persistent handle`需明确地进行销毁，而`local handle`则可通过`HandleScope`进行管理。
+
 ## FunctionTemplate
 用来创建运行时函数的模板，在一个`Context`中，只能有一个`Function`从模板中创建出来。\
 可以在`FunctionTemplate`上设置属性，即为创建的函数对象的属性。\

@@ -31,3 +31,16 @@
 
 ## ObjectTemplate
 用来创建运行时对象的模板。
+
+# 构建工具
+
+## node-gyp
+基于谷歌的`GYP(Generate You Projects)`构建工具。该工具根据操作系统生成对应的项目构建配置文件，并使用平台特定的编译工具，完成项目的构建。例如：`Linux`平台下生成`Makefile`，`Mac`平台下生成`.xcodeproj`，`Windows`平台下生成`.sln`和`.vcproject`。
+
+优点：`nodejs`自带，配置相对简单。\
+缺点：有所限制。
+
+## CMake.js
+基于`CMake`。
+
+优点：对于已经使用`CMake`的项目或库友好，可配置性强。

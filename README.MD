@@ -44,3 +44,6 @@
 基于`CMake`。
 
 优点：对于已经使用`CMake`的项目或库友好，可配置性强。
+
+## 预构建
+node-pre-gyp，prebuild

@@ -1,3 +1,19 @@
+# 使用Addon的原因
+* 使用现有C/C++库或项目
+* 访问操作系统的能力
+* 计算型任务
+
+# Addon实现方式
+
+## Direct Use of V8
+本仓库所使用的方式。
+
+## NAN(Native Abstractions for Node.js)
+针对`v8`引擎实现，需更新`nan`当`nodejs`所使用的`v8`更新时。[示例](https://github.com/SageWu/nan-example)。
+
+## NAPI(Node-API)
+JS引擎无关，向后兼容，无需重新编译。使用`node-addon-api`，则可以以面向对象的模式使用`napi`的接口，开发体验更友好。
+
 # 基本概念
 
 ## Isolate
